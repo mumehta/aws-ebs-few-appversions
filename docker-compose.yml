@@ -1,0 +1,13 @@
+---
+version: '2'
+services:
+  awsutil:
+    build:
+      context: .
+    working_dir: /usr/src
+    volumes:
+      - .:/usr/src
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION
